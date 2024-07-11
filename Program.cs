@@ -11,8 +11,8 @@ class Program
         var background = Raylib.LoadTexture("Data/Images/background.png");
         Vector2 bg_offset = new Vector2(0, 0);
 
-        var types    = JsonHelper.LoadTypesFromJson("Data/Types.json");
-        var pokemons = XmlHelper.LoadPokemonsFromXml("Data/Pokemons.xml");
+        var types    = JsonHelper.LoadTypesFromJson("Data/Datasources/Types.json");
+        var pokemons = XmlHelper.LoadPokemonsFromXml("Data/Datasources/Pokemons.xml");
 
         var pokemons_by_type = new Dictionary<string, List<Pokemon>>();
 
