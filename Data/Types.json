@@ -1,0 +1,27 @@
+{
+    "Normal": {
+        "description" : "It's basic",
+        "image" : "normal.png",
+        "pokemonIds" : [ 1 ]
+    },
+    "Electric": {
+        "description" : "It shock",
+        "image" : "electric.png",
+        "pokemonIds" : [ 1 ]
+    },
+    "Fire": {
+        "description" : "It burn",
+        "image" : "fire.png",
+        "pokemonIds" : [ 2 ]
+    },
+    "Water": {
+        "description" : "It hydrate",
+        "image" : "water.png",
+        "pokemonIds" : [ 3 ]
+    },
+    "Grass": {
+        "description" : "It feels good",
+        "image" : "grass.png",
+        "pokemonIds" : [ 4 ]
+    }
+}
