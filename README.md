@@ -1,0 +1,3 @@
+## Build
+
+dotnet run
