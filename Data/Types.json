@@ -1,27 +1,37 @@
-{
-    "Normal": {
+[
+    {
+        "TypeId" : 1,
+        "Name" : "Normal",
         "Description" : "It's basic",
         "ImagePath" : "Data/Images/normal.png",
         "PokemonIds" : [ 5 ]
     },
-    "Electric": {
+    {
+        "TypeId" : 2,
+        "Name" : "Electric",
         "Description" : "It shock",
         "ImagePath" : "Data/Images/electric.png",
         "PokemonIds" : [ 1, 12, 6 ]
     },
-    "Fire": {
+    {
+        "TypeId" : 3,
+        "Name" : "Fire",
         "Description" : "It burn",
         "ImagePath" : "Data/Images/fire.png",
         "PokemonIds" : [ 2, 8, 10 ]
     },
-    "Water": {
+    {
+        "TypeId" : 4,
+        "Name" : "Water",
         "Description" : "It hydrate",
         "ImagePath" : "Data/Images/water.png",
         "PokemonIds" : [ 3, 7, 11 ]
     },
-    "Grass": {
+    {
+        "TypeId" : 5,
+        "Name" : "Grass",
         "Description" : "It feels good",
         "ImagePath" : "Data/Images/grass.png",
         "PokemonIds" : [ 4, 9 ]
     }
-}
+]

@@ -8,20 +8,21 @@ using Raylib_cs;
 class Pokemon
 {
     public int PokemonId { get; set; }
-    public string Name { get; set; }
-    public string ImagePath { get; set; }
+    public int TypeId { get; set; }
+    public required string Name { get; set; }
+    public required string ImagePath { get; set; }
     public Texture2D Image { get; set; }
 }
 
 class Type
 {
     public int TypeId { get; set; }
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public string ImagePath { get; set; }
+    public required string Name { get; set; }
+    public required string Description { get; set; }
+    public required string ImagePath { get; set; }
     public Texture2D Image { get; set; }
 
-    public List<Pokemon> PokemonIds { get; set; }
+    public required List<int> PokemonIds { get; set; }
 }
 
 class XmlHelper
@@ -32,6 +33,7 @@ class XmlHelper
         var pokemons = xdoc.Descendants("Pokemon").Select(p => new Pokemon
         {
             PokemonId = (int)    p.Element("PokemonId"),
+            TypeId    = (int)    p.Element("TypeId"),
             Name      = (string) p.Element("Name"),
             ImagePath = (string) p.Element("ImagePath"),
             Image     = Raylib.LoadTexture((string) p.Element("ImagePath"))
@@ -43,10 +45,15 @@ class XmlHelper
 
 class JsonHelper
 {
-    public static Dictionary<string, Type> LoadTypesFromJson(string jsonFilePath)
+    public static List<Type> LoadTypesFromJson(string jsonFilePath)
     {
         var jsonString = File.ReadAllText(jsonFilePath);
-        var types = JsonSerializer.Deserialize<Dictionary<string, Type>>(jsonString);
+        var types = JsonSerializer.Deserialize<List<Type>>(jsonString);
+
+        foreach (var type in types) {
+            type.Image = Raylib.LoadTexture(type.ImagePath);
+        }
+
         return types;
     }
 }
