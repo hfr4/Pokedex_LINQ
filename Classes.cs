@@ -3,19 +3,19 @@ using System.Collections.Generic;
 
 class Pokemon
 {
-    int PokemonId { get; set; }
-    string Name { get; set; }
-    string Image { get; set; }
+    public int PokemonId { get; set; }
+    public string Name { get; set; }
+    public string Image { get; set; }
 
     public virtual Type Type { get; set; }
 }
 
 class Type
 {
-    int TypeId { get; set; }
-    string Name { get; set; }
-    string Description { get; set; }
-    string Image { get; set; }
+    public int TypeId { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public string Image { get; set; }
 
     public virtual List<Pokemon> Pokemons { get; set; }
 }
