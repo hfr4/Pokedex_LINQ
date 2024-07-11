@@ -2,61 +2,61 @@
     <Pokemon>
         <PokemonId>1</PokemonId>
         <Name>Pikachu</Name>
-        <Image>pikachu.png<Image>
+        <ImagePath>Data/Images/pikachu.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>2</PokemonId>
         <Name>Charmander</Name>
-        <Image>charmander.png<Image>
+        <ImagePath>Data/Images/charmander.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>3</PokemonId>
         <Name>Squirtle</Name>
-        <Image>squirtle.png<Image>
+        <ImagePath>Data/Images/squirtle.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>4</PokemonId>
         <Name>Bulbasaur</Name>
-        <Image>bulbasaur.png<Image>
+        <ImagePath>Data/Images/bulbasaur.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>5</PokemonId>
         <Name>Eevee</Name>
-        <Image>eevee.png<Image>
+        <ImagePath>Data/Images/eevee.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>6</PokemonId>
         <Name>Jolteon</Name>
-        <Image>jolteon.png<Image>
+        <ImagePath>Data/Images/jolteon.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>7</PokemonId>
         <Name>Vaporeon</Name>
-        <Image>vaporeon.png<Image>
+        <ImagePath>Data/Images/vaporeon.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>8</PokemonId>
         <Name>Flareon</Name>
-        <Image>flareon.png<Image>
+        <ImagePath>Data/Images/flareon.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>9</PokemonId>
         <Name>Caterpie</Name>
-        <Image>caterpie.png<Image>
+        <ImagePath>Data/Images/caterpie.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>10</PokemonId>
         <Name>Magmar</Name>
-        <Image>magmar.png<Image>
+        <ImagePath>Data/Images/magmar.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>11</PokemonId>
         <Name>Horsea</Name>
-        <Image>horsea.png<Image>
+        <ImagePath>Data/Images/horsea.png</ImagePath>
     </Pokemon>
     <Pokemon>
         <PokemonId>12</PokemonId>
         <Name>Electabuzz</Name>
-        <Image>electabuzz.png<Image>
+        <ImagePath>Data/Images/electabuzz.png</ImagePath>
     </Pokemon>
 </Root>

@@ -16,18 +16,9 @@ class Program
         Texture2D water     = Raylib.LoadTexture("Data/Images/water.png");
         Texture2D grass     = Raylib.LoadTexture("Data/Images/grass.png");
 
-        Texture2D pikachu    = Raylib.LoadTexture("Data/Images/pikachu.png");
-        Texture2D charmander = Raylib.LoadTexture("Data/Images/charmander.png");
-        Texture2D squirtle   = Raylib.LoadTexture("Data/Images/squirtle.png");
-        Texture2D bulbasaur  = Raylib.LoadTexture("Data/Images/bulbasaur.png");
-        Texture2D eevee      = Raylib.LoadTexture("Data/Images/eevee.png");
-        Texture2D jolteon    = Raylib.LoadTexture("Data/Images/jolteon.png");
-        Texture2D vaporeon   = Raylib.LoadTexture("Data/Images/vaporeon.png");
-        Texture2D flareon    = Raylib.LoadTexture("Data/Images/flareon.png");
-        Texture2D electabuzz = Raylib.LoadTexture("Data/Images/electabuzz.png");
-        Texture2D horsea     = Raylib.LoadTexture("Data/Images/horsea.png");
-        Texture2D caterpie   = Raylib.LoadTexture("Data/Images/caterpie.png");
-        Texture2D magmar     = Raylib.LoadTexture("Data/Images/magmar.png");
+        // var types  = JsonHelper.LoadTypesFromJson("Data/Types.json");
+        var pokemons = XmlHelper.LoadPokemonsFromXml("Data/Pokemons.xml");
+
 
 
         Vector2 bg_offset = new Vector2(0, 0);
@@ -63,18 +54,14 @@ class Program
 
             Raylib.DrawText("Pokédex !", 12, 12, 20, Color.Black);
 
-            Raylib.DrawTexture(pikachu   , 200, 200, Color.White);
-            Raylib.DrawTexture(charmander, 300, 200, Color.White);
-            Raylib.DrawTexture(squirtle  , 400, 200, Color.White);
-            Raylib.DrawTexture(bulbasaur , 500, 200, Color.White);
-            Raylib.DrawTexture(eevee     , 600, 200, Color.White);
-            Raylib.DrawTexture(jolteon   , 700, 200, Color.White);
-            Raylib.DrawTexture(vaporeon  , 200, 300, Color.White);
-            Raylib.DrawTexture(flareon   , 300, 300, Color.White);
-            Raylib.DrawTexture(electabuzz, 400, 300, Color.White);
-            Raylib.DrawTexture(horsea    , 500, 300, Color.White);
-            Raylib.DrawTexture(caterpie  , 600, 300, Color.White);
-            Raylib.DrawTexture(magmar    , 700, 300, Color.White);
+            var i = 0;
+            foreach (var pokemon in pokemons) {
+                var x = i % 6;
+                var y = i / 6;
+
+                Raylib.DrawTexture(pokemon.Image, x * 100 + 100, y * 100 + 200, Color.White);
+                i += 1;
+            }
 
             Raylib.DrawText("All"        , 50 , 120, 20, Color.Black);
             Raylib.DrawTexture(normal    , 100, 100, Color.White);
@@ -112,11 +99,12 @@ class Program
                     Raylib.DrawRectangleLinesEx(text_rect, 1, Color.Black);
                     Raylib.DrawText(element_name, (int) text_rect.X + 5, (int) text_rect.Y + 5     , 20, Color.Black);
                     Raylib.DrawText(element_desc, (int) text_rect.X + 5, (int) text_rect.Y + 5 + 25, 10, Color.Gray);
+
+                    if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
+                        Console.WriteLine("Press Electric !");
+                    }
                 }
                 
-                if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
-                    Console.WriteLine("Press Electric !");
-                }
             }
 
             {
@@ -130,11 +118,12 @@ class Program
                     Raylib.DrawRectangleLinesEx(text_rect, 1, Color.Black);
                     Raylib.DrawText(element_name, (int) text_rect.X + 5, (int) text_rect.Y + 5     , 20, Color.Black);
                     Raylib.DrawText(element_desc, (int) text_rect.X + 5, (int) text_rect.Y + 5 + 25, 10, Color.Gray);
+
+                    if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
+                        Console.WriteLine("Press Fire !");
+                    }
                 }
                 
-                if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
-                    Console.WriteLine("Press Fire !");
-                }
             }
 
             {
@@ -148,11 +137,12 @@ class Program
                     Raylib.DrawRectangleLinesEx(text_rect, 1, Color.Black);
                     Raylib.DrawText(element_name, (int) text_rect.X + 5, (int) text_rect.Y + 5     , 20, Color.Black);
                     Raylib.DrawText(element_desc, (int) text_rect.X + 5, (int) text_rect.Y + 5 + 25, 10, Color.Gray);
+
+                    if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
+                        Console.WriteLine("Press Water !");
+                    }
                 }
                 
-                if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
-                    Console.WriteLine("Press Water !");
-                }
             }
 
             {
@@ -166,13 +156,13 @@ class Program
                     Raylib.DrawRectangleLinesEx(text_rect, 1, Color.Black);
                     Raylib.DrawText(element_name, (int) text_rect.X + 5, (int) text_rect.Y + 5     , 20, Color.Black);
                     Raylib.DrawText(element_desc, (int) text_rect.X + 5, (int) text_rect.Y + 5 + 25, 10, Color.Gray);
+
+                    if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
+                        Console.WriteLine("Press Grass !");
+                    }
                 }
                 
-                if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
-                    Console.WriteLine("Press Grass !");
-                }
             }
-
 
             Raylib.EndDrawing();
         }

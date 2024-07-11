@@ -1,27 +1,27 @@
 {
     "Normal": {
-        "description" : "It's basic",
-        "image" : "normal.png",
-        "pokemonIds" : [ 1 ]
+        "Description" : "It's basic",
+        "ImagePath" : "Data/Images/normal.png",
+        "PokemonIds" : [ 5 ]
     },
     "Electric": {
-        "description" : "It shock",
-        "image" : "electric.png",
-        "pokemonIds" : [ 1 ]
+        "Description" : "It shock",
+        "ImagePath" : "Data/Images/electric.png",
+        "PokemonIds" : [ 1, 12, 6 ]
     },
     "Fire": {
-        "description" : "It burn",
-        "image" : "fire.png",
-        "pokemonIds" : [ 2 ]
+        "Description" : "It burn",
+        "ImagePath" : "Data/Images/fire.png",
+        "PokemonIds" : [ 2, 8, 10 ]
     },
     "Water": {
-        "description" : "It hydrate",
-        "image" : "water.png",
-        "pokemonIds" : [ 3 ]
+        "Description" : "It hydrate",
+        "ImagePath" : "Data/Images/water.png",
+        "PokemonIds" : [ 3, 7, 11 ]
     },
     "Grass": {
-        "description" : "It feels good",
-        "image" : "grass.png",
-        "pokemonIds" : [ 4 ]
+        "Description" : "It feels good",
+        "ImagePath" : "Data/Images/grass.png",
+        "PokemonIds" : [ 4, 9 ]
     }
 }
