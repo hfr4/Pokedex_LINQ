@@ -3,72 +3,96 @@
         <PokemonId>1</PokemonId>
         <TypeId>2</TypeId>
         <Name>Pikachu</Name>
+        <Description>Electric mouse Pokémon with iconic red cheeks and lightning-bolt tail.</Description>
         <ImagePath>Data/Images/pikachu.png</ImagePath>
+        <SoundPath>Data/Sounds/pikachu.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>2</PokemonId>
         <TypeId>3</TypeId>
         <Name>Charmander</Name>
+        <Description>Fire-type lizard with a flame on its tail.</Description>
         <ImagePath>Data/Images/charmander.png</ImagePath>
+        <SoundPath>Data/Sounds/charmander.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>3</PokemonId>
         <TypeId>4</TypeId>
         <Name>Squirtle</Name>
+        <Description>Water-type turtle known for its ability to squirt water.</Description>
         <ImagePath>Data/Images/squirtle.png</ImagePath>
+        <SoundPath>Data/Sounds/squirtle.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>4</PokemonId>
         <TypeId>5</TypeId>
         <Name>Bulbasaur</Name>
+        <Description>Grass/Poison-type with a plant bulb on its back.</Description>
         <ImagePath>Data/Images/bulbasaur.png</ImagePath>
+        <SoundPath>Data/Sounds/bulbasaur.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>5</PokemonId>
         <TypeId>1</TypeId>
         <Name>Eevee</Name>
+        <Description>Normal-type fox-like Pokémon with multiple evolution possibilities.</Description>
         <ImagePath>Data/Images/eevee.png</ImagePath>
+        <SoundPath>Data/Sounds/eevee.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>6</PokemonId>
         <TypeId>2</TypeId>
         <Name>Jolteon</Name>
+        <Description>Electric-type evolution of Eevee with spiky yellow fur.</Description>
         <ImagePath>Data/Images/jolteon.png</ImagePath>
+        <SoundPath>Data/Sounds/jolteon.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>7</PokemonId>
         <TypeId>4</TypeId>
         <Name>Vaporeon</Name>
+        <Description>Water-type evolution of Eevee with fish-like features.</Description>
         <ImagePath>Data/Images/vaporeon.png</ImagePath>
+        <SoundPath>Data/Sounds/vaporeon.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>8</PokemonId>
         <TypeId>3</TypeId>
         <Name>Flareon</Name>
+        <Description>Fire-type evolution of Eevee with fluffy orange fur.</Description>
         <ImagePath>Data/Images/flareon.png</ImagePath>
+        <SoundPath>Data/Sounds/flareon.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>9</PokemonId>
         <TypeId>5</TypeId>
         <Name>Caterpie</Name>
+        <Description>Bug-type caterpillar Pokémon that evolves into Butterfree.</Description>
         <ImagePath>Data/Images/caterpie.png</ImagePath>
+        <SoundPath>Data/Sounds/caterpie.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>10</PokemonId>
         <TypeId>3</TypeId>
         <Name>Magmar</Name>
+        <Description>Fire-type Pokémon resembling a duck-billed dinosaur with flames.</Description>
         <ImagePath>Data/Images/magmar.png</ImagePath>
+        <SoundPath>Data/Sounds/magmar.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>11</PokemonId>
         <TypeId>4</TypeId>
         <Name>Horsea</Name>
+        <Description>Water-type seahorse Pokémon that spits ink.</Description>
         <ImagePath>Data/Images/horsea.png</ImagePath>
+        <SoundPath>Data/Sounds/horsea.wav</SoundPath>
     </Pokemon>
     <Pokemon>
         <PokemonId>12</PokemonId>
         <TypeId>2</TypeId>
         <Name>Electabuzz</Name>
+        <Description>Electric-type humanoid Pokémon with black stripes.</Description>
         <ImagePath>Data/Images/electabuzz.png</ImagePath>
+        <SoundPath>Data/Sounds/electabuzz.wav</SoundPath>
     </Pokemon>
 </Root>

@@ -4,6 +4,7 @@
         "Name" : "Normal",
         "Description" : "It's basic",
         "ImagePath" : "Data/Images/normal.png",
+        "SoundPath" : "Data/Sounds/normal.wav",
         "PokemonIds" : [ 5 ]
     },
     {
@@ -11,6 +12,7 @@
         "Name" : "Electric",
         "Description" : "It shock",
         "ImagePath" : "Data/Images/electric.png",
+        "SoundPath" : "Data/Sounds/electric.wav",
         "PokemonIds" : [ 1, 12, 6 ]
     },
     {
@@ -18,6 +20,7 @@
         "Name" : "Fire",
         "Description" : "It burn",
         "ImagePath" : "Data/Images/fire.png",
+        "SoundPath" : "Data/Sounds/fire.wav",
         "PokemonIds" : [ 2, 8, 10 ]
     },
     {
@@ -25,6 +28,7 @@
         "Name" : "Water",
         "Description" : "It hydrate",
         "ImagePath" : "Data/Images/water.png",
+        "SoundPath" : "Data/Sounds/water.wav",
         "PokemonIds" : [ 3, 7, 11 ]
     },
     {
@@ -32,6 +36,7 @@
         "Name" : "Grass",
         "Description" : "It feels good",
         "ImagePath" : "Data/Images/grass.png",
+        "SoundPath" : "Data/Sounds/grass.wav",
         "PokemonIds" : [ 4, 9 ]
     }
 ]

@@ -7,6 +7,7 @@ class Program
     {
         Raylib.SetTraceLogLevel(TraceLogLevel.None);
         Raylib.InitWindow(800, 480, "Pokedex");
+        Raylib.InitAudioDevice();
 
         var background = Raylib.LoadTexture("Data/Images/background.png");
         Vector2 bg_offset = new Vector2(0, 0);
@@ -32,8 +33,6 @@ class Program
 
         while (!Raylib.WindowShouldClose())
         {
-            var mouse_position = Raylib.GetMousePosition();
-
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Color.White);
 
@@ -83,14 +82,14 @@ class Program
                 Raylib.DrawText("All", x, y, 30, Color.Black);
                 var element_rect = new Rectangle(x - 10, y - 10, 60, 60);
 
-                if (Raylib.CheckCollisionPointRec(mouse_position, element_rect)) {
+                if (Raylib.CheckCollisionPointRec(Raylib.GetMousePosition(), element_rect)) {
                     if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
                         shown_pokemons = pokemons;
                     }
                 }
             }
 
-            // Draw "Types"
+            // Draw "Types" buttons
             i = 0;
             foreach (var type in types) {
                 var x = i * 100 + 200;
@@ -111,15 +110,21 @@ class Program
                 var y = coord_y * 100 + 200;
                 
                 var element_name = pokemon.Name;
-                var element_desc = "This is a description.";
+                var element_desc = pokemon.Description;
                 var element_rect = new Rectangle(x, y, pokemon.Image.Width, pokemon.Image.Height);
 
-                if (Raylib.CheckCollisionPointRec(mouse_position, element_rect)) {
-                    var text_rect = new Rectangle( (int) mouse_position.X + 15, (int) mouse_position.Y + 15, 300, 100);
+                if (Raylib.CheckCollisionPointRec(Raylib.GetMousePosition(), element_rect)) {
+                    int DescriptionWidth = Raylib.MeasureText(element_desc, 10);
+                    int text_rect_width = Math.Max(300,  DescriptionWidth + 10);
+                    var text_rect = new Rectangle( (int) Raylib.GetMousePosition().X + 15, (int) Raylib.GetMousePosition().Y + 15, text_rect_width, 100);
                     Raylib.DrawRectangleRec(text_rect, Color.White);
                     Raylib.DrawRectangleLinesEx(text_rect, 1, Color.Black);
                     Raylib.DrawText(element_name, (int) text_rect.X + 5, (int) text_rect.Y + 5     , 20, Color.Black);
                     Raylib.DrawText(element_desc, (int) text_rect.X + 5, (int) text_rect.Y + 5 + 25, 10, Color.Gray);
+
+                    if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
+                        Raylib.PlaySound(pokemon.Sound);
+                    }
                 }
 
                 i += 1;
@@ -135,8 +140,8 @@ class Program
                 var element_desc = type.Description;
                 var element_rect = new Rectangle(x, y, type.Image.Width, type.Image.Height);
 
-                if (Raylib.CheckCollisionPointRec(mouse_position, element_rect)) {
-                    var text_rect = new Rectangle( (int) mouse_position.X + 15, (int) mouse_position.Y + 15, 300, 100);
+                if (Raylib.CheckCollisionPointRec(Raylib.GetMousePosition(), element_rect)) {
+                    var text_rect = new Rectangle( (int) Raylib.GetMousePosition().X + 15, (int) Raylib.GetMousePosition().Y + 15, 300, 100);
                     Raylib.DrawRectangleRec(text_rect, Color.White);
                     Raylib.DrawRectangleLinesEx(text_rect, 1, Color.Black);
                     Raylib.DrawText(element_name, (int) text_rect.X + 5, (int) text_rect.Y + 5     , 20, Color.Black);
@@ -144,12 +149,12 @@ class Program
 
                     if (Raylib.IsMouseButtonPressed(MouseButton.Left)) {
                         shown_pokemons = pokemons_by_type[type.Name];
+                        Raylib.PlaySound(type.Sound);
                     }
                 }
 
                 i += 1;
             }
-
 
             Raylib.EndDrawing();
         }
