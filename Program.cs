@@ -162,4 +162,3 @@ class Program
         Raylib.CloseWindow();
     }
 }
-
