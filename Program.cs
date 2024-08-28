@@ -9,8 +9,8 @@ class Program
         Raylib.InitWindow(800, 480, "Pokedex");
         Raylib.InitAudioDevice();
 
-        var background = Raylib.LoadTexture("Data/Images/background.png");
-        Vector2 bg_offset = new Vector2(0, 0);
+        var bg_image  = Raylib.LoadTexture("Data/Images/background.png");
+        var bg_offset = new Vector2(0, 0);
 
         var types    = JsonHelper.LoadTypesFromJson("Data/Datasources/Types.json");
         var pokemons = XmlHelper.LoadPokemonsFromXml("Data/Datasources/Pokemons.xml");
@@ -41,20 +41,27 @@ class Program
                 bg_offset.X += (float) 0.05;
                 bg_offset.Y += (float) 0.05;
         
-                if (bg_offset.X > background.Width)  bg_offset.X = 0;
-                if (bg_offset.Y > background.Height) bg_offset.Y = 0;
+                if (bg_offset.X > bg_image.Width)  bg_offset.X = 0;
+                if (bg_offset.Y > bg_image.Height) bg_offset.Y = 0;
 
-                var bg_color = new Color(255, 255, 255, 30);
-    
-                Raylib.DrawTexture(background, (int) bg_offset.X - background.Width, (int) bg_offset.Y - background.Height, bg_color);
-                Raylib.DrawTexture(background, (int) bg_offset.X - background.Width, (int) bg_offset.Y                    , bg_color);
-                Raylib.DrawTexture(background, (int) bg_offset.X - background.Width, (int) bg_offset.Y + background.Height, bg_color);
-                Raylib.DrawTexture(background, (int) bg_offset.X                   , (int) bg_offset.Y - background.Height, bg_color);
-                Raylib.DrawTexture(background, (int) bg_offset.X                   , (int) bg_offset.Y                    , bg_color);
-                Raylib.DrawTexture(background, (int) bg_offset.X                   , (int) bg_offset.Y + background.Height, bg_color);
-                Raylib.DrawTexture(background, (int) bg_offset.X + background.Width, (int) bg_offset.Y - background.Height, bg_color);
-                Raylib.DrawTexture(background, (int) bg_offset.X + background.Width, (int) bg_offset.Y                    , bg_color);
-                Raylib.DrawTexture(background, (int) bg_offset.X + background.Width, (int) bg_offset.Y + background.Height, bg_color);
+                {
+                    var bg_color = new Color(255, 255, 255, 30);
+
+                    var x = (int) bg_offset.X;
+                    var y = (int) bg_offset.Y;
+                    var w = bg_image.Width;
+                    var h = bg_image.Height;
+        
+                    Raylib.DrawTexture(bg_image, x - w, y - h, bg_color);
+                    Raylib.DrawTexture(bg_image, x - w, y    , bg_color);
+                    Raylib.DrawTexture(bg_image, x - w, y + h, bg_color);
+                    Raylib.DrawTexture(bg_image, x    , y - h, bg_color);
+                    Raylib.DrawTexture(bg_image, x    , y    , bg_color);
+                    Raylib.DrawTexture(bg_image, x    , y + h, bg_color);
+                    Raylib.DrawTexture(bg_image, x + w, y - h, bg_color);
+                    Raylib.DrawTexture(bg_image, x + w, y    , bg_color);
+                    Raylib.DrawTexture(bg_image, x + w, y + h, bg_color);
+                }
             }
 
             // Draw title
